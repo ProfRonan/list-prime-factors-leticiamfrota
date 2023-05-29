@@ -9,5 +9,9 @@ def is_prime(number: int) -> bool:
 
 def list_prime_factors(number: int) -> list[int]:
     """Retorna uma lista com os fatores primos de cada número da lista fornecida."""
-
-    return []
+    primos = []
+    for i in range (2,number+1):
+        while number % i == 0:
+            primos.append(i)
+            number = number/i
+    return primos
